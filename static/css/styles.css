@@ -1,0 +1,113 @@
+.aw {
+    padding: 20%;
+    color: white;
+}
+
+.we {
+    padding-top: 15px;
+    font-size: 30px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.be {
+    font-size: 45px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.reg {
+    padding-top: 30px;
+}
+
+.up {
+    padding-top: 20px;
+}
+
+.log {
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+
+.box-info {
+    color: white;
+    text-align: center;
+    padding: 20%;
+}
+
+#hae {
+    text-align: center;
+}
+
+.des {
+    font-size: 15px;
+}
+
+.rate1,
+.rate2,
+.rate3,
+.rate4 {
+    height: 100px;
+    width: 100px;
+    display: absolute;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    padding: 20%;
+    border: solid;
+}
+
+.rate1 {
+    border-color: orange;
+}
+
+.rate2 {
+    border-color: red;
+}
+
+.rate3 {
+    border-color: blue;
+}
+
+.rate4 {
+    border-color: green;
+}
+
+.hae {
+    font-size: 70px;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.by {
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.ha {
+    color: #0B5345;
+    font-weight: bolder;
+}
+
+.user {
+    color: white;
+}
+
+.site {
+    color: white;
+}
+
+.copy {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.intro {
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+}
