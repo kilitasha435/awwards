@@ -1,0 +1,51 @@
+{% load crispy_forms_tags %}{{ form.media }}
+<nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar  " style="background-color:black;border-bottom:#566573;height:15vh;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/" id="home" style="color:white;">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <button class="btn btn-sm btn-info"><a href="{%url 'postImage'%}"><span class="site">Submit your site</span></a> </button>
+
+
+        </ul>
+
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user">{{ user.username|title }}</span> <img class="rounded-circle nav-img"
+                                                                        src="{{ user.profile. }}"
+                                                                        alt="">
+                </a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>
+                <hr>
+                <a class="dropdown-item text-center" href="{% url 'userprofile' user.username %}"> Edit profile</a>
+                <hr>
+                <a href="/logout" class="text-center dropdown-item">Log Out</a>
+
+
+            </div>
+        </li>
+        {% else %}
+        <li>
+            <a class='btn btn-sm btn-info log' href="/accounts/login">Login</a>
+            <a class='btn btn-sm btn-info reg' href="/accounts/register">Register</a>
+        </li>
+        {% endif %}
+        <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title">
+            <button class="btn btn-default btn-sm my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </div>
+</nav>
+
+<script>
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
+</script>
