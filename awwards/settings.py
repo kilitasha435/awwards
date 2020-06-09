@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'voter.apps.VoterConfig',
-    'bootstrap3',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tinymce',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'crispy_forms',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [

@@ -31,6 +31,8 @@ class Profile(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=150)
+    # voter_profile=models.CharField(max_length=100)
+    # voter_post=models.CharField(max_length=100)
     url = models. CharField(max_length=255)
     description = models.TextField(max_length=500)
     technologies = models.CharField(max_length=255, blank=True)
