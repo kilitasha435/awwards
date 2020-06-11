@@ -6,7 +6,7 @@ import datetime as dt
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile' )
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile', null=True)
     profile_picture = models.ImageField(upload_to='images/', default='default.png')
     bio = models.TextField(max_length=500, default="My Bio",  blank=True)
     name = models.CharField(max_length=120, blank=True)
