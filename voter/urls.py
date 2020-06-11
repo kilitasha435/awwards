@@ -12,7 +12,7 @@ router.register('posts', views.PostViewSet)
 router.register('profile', views.ProfileViewSet)
 
 urlpatterns=[
-    url('^$', views.home, name='home'),
+    url('^$',views.post_image,name='postImage'),
     url(r'^api/', include(router.urls)),
     url(r'^(?P<username>\w+)/profile/', views.user_profile, name='userprofile'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
@@ -20,7 +20,7 @@ urlpatterns=[
     url(r'^profile/(?P<username>\w+)/settings', views.edit_profile, name='edit'),
     url(r'^project/(?P<post>\w+)', views.project, name='project'),
     url(r'^search/', views.search_project, name='search'),
-    url(r'^postImage/',views.post_image,name='postImage'),
+    # url(r'^postImage/',views.post_image,name='postImage'),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
