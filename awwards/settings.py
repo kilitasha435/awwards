@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tinymce',
     'six',
+    # 'registration',
 ]
 
 
